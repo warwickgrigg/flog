@@ -17,6 +17,10 @@ const level = 1; // very detailed; eg. detailed debug level
 const data = ["brave", "new", "world"];
 
 flog(logger)(transformer)(threshold)(level)(data); // ["brave", "new", "world"]
+
+// logAll: a convenience function for logging everything as JSON
+//         equivalent to flog(clog)(toJSON)(0)(1)
+
 logAll("hello world")); // "hello world"
 
 // flog returns data passed in final invocation's argument - useful
@@ -27,9 +31,6 @@ logAll("hello world")); // "hello world"
 // .then(logAll)
 // .then (
 //    etc
-
-// logAll: a convenience function for logging everything as JSON
-//         equivalent to flog(clog)(toJSON)(0)(1)
 
 console.log(logAll("hello world")); // "hello world" hello world
 
