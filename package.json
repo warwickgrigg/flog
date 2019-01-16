@@ -2,6 +2,7 @@
   "name": "@warwickgrigg/flog",
   "version": "0.0.1",
   "description": "FP style logger",
+  "licence": "MIT",
   "main": "./src/flog.js",
   "repository": "warwickgrigg/flog",
   "scripts": {
