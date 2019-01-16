@@ -2,6 +2,8 @@
 
 FP style logger
 
+version 0.0.1 - maybe breaking changes
+
 ```javascript
 import { flog, clog, identity, toJSON, logAll } from "./flog";
 
@@ -16,7 +18,7 @@ const data = ["brave", "new", "world"];
 
 flog(clog)(identity)(0)(1)(["brave", "new", "world"]); // ["brave", "new", "world"]
 
-// flog returns data passed in final argument - useful
+// flog returns data passed in final invocation's argument - useful
 //   for logging promises, functional composition etc
 //
 // .then(logAll)
