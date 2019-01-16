@@ -1,0 +1,2 @@
+# flog
+FP style logger
