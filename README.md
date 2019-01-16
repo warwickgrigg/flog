@@ -16,7 +16,8 @@ const threshold = 0; // log every level greater than zero
 const level = 1; // very detailed; eg. detailed debug level
 const data = ["brave", "new", "world"];
 
-flog(clog)(identity)(0)(1)(["brave", "new", "world"]); // ["brave", "new", "world"]
+flog(logger)(transformer)(threshold)(level)(data); // ["brave", "new", "world"]
+logAll("hello world")); // "hello world"
 
 // flog returns data passed in final invocation's argument - useful
 //   for logging promises, functional composition etc
