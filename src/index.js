@@ -1,4 +1,4 @@
-import { flog, clog, identity, toJSON, logAll } from "./flog";
+import { flog, clog, identity, toJSON, logAll } from "./flog.js";
 
 console.log("started app");
 
