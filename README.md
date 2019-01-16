@@ -24,8 +24,9 @@ flog(clog)(identity)(0)(1)(["brave", "new", "world"]); // ["brave", "new", "worl
 // .then(logAll)
 // .then (
 //    etc
-//
+
 // logAll: a convenience function for logging everything as JSON
+//         equivalent to flog(clog)(toJSON)(0)(1)
 
 console.log(logAll("hello world")); // "hello world" hello world
 
