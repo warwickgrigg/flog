@@ -1,5 +1,5 @@
-const flog = logger => transformer => bar => level => obj => {
-  if (level > bar) {
+const flog = logger => transformer => threshold => level => obj => {
+  if (level > threshold) {
     logger(transformer(obj));
   }
   return obj;
