@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "FP style logger",
   "main": "index.js",
+  "repository": "warwickgrigg/flog",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
