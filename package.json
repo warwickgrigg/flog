@@ -1,6 +1,6 @@
 {
   "name": "@warwickgrigg/flog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FP style logger",
   "main": "index.html",
   "scripts": {
