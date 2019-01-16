@@ -2,7 +2,7 @@
   "name": "@warwickgrigg/flog",
   "version": "1.0.1",
   "description": "FP style logger",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
