@@ -3,13 +3,16 @@
   "version": "0.0.1",
   "description": "FP style logger",
   "licence": "MIT",
-  "module": "src/flog.js",
-  "jsnext:main": "src/flog.js",
-  "unpkg": "src/flog.js",
+  "source": "src/flog.js",
+  "main": "dist/flog.js",
+  "umd:main": "dist/flog.umd.js",
+  "module": "dist/flog.mjs",
+  "unpkg": "dist/flog.umd.js",
   "repository": "warwickgrigg/flog",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "microbundle",
+    "xstart": "xparcel index.html --open",
+    "xbuild": "xparcel build index.html"
   },
   "dependencies": {},
   "devDependencies": {
