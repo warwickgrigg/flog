@@ -11,6 +11,7 @@
   "repository": "warwickgrigg/flog",
   "scripts": {
     "build": "microbundle",
+    "dev": "microbundle watch",
     "xstart": "xparcel index.html --open",
     "xbuild": "xparcel build index.html"
   },
