@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "FP style logger",
   "licence": "MIT",
-  "main": "./src/flog.js",
+  "main": "index.html",
+  "module": "src/flog.js",
+  "unpkg": "src/flog.js",
   "repository": "warwickgrigg/flog",
   "scripts": {
     "start": "parcel index.html --open",
