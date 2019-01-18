@@ -1,4 +1,6 @@
-const { flog, toJSON } = require("./flog");
+'use strict';
+
+import { flog, toJSON } from "../src/flog";
 
 //jest tests
 
