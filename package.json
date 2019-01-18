@@ -4,17 +4,23 @@
   "description": "FP style logger",
   "licence": "MIT",
   "source": "src/flog.js",
-  "main": "src/flog.js",
+  "main": "index.html",
   "module": "src/flog.mjs",
   "unpkg": "src/flog.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "test": "jest --coverage --no-cache",
+    "bundle": "rollup -i src/flog.js -o dist/flog.js -m -f umd -n flog",
+    "release": "npm run bundle && npm test && git commit -am $npm_package_version"
   },
   "repository": "warwickgrigg/flog",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
+    "parcel-bundler": "^1.6.1",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.2",
+    "rollup": "^1.1.0"
   }
 }
