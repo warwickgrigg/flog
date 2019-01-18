@@ -18,8 +18,12 @@
   "repository": "warwickgrigg/flog",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "jest": "^23.6.0",
     "prettier": "^1.14.2",
-    "rollup": "^1.1.0"
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.3.1",
+    "rollup-plugin-node-resolve": "^4.0.0"
   }
 }

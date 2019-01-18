@@ -3,13 +3,26 @@
   factory();
 }(function () { 'use strict';
 
-  exports.flog = logger => transformer => threshold => level => text => data => {
-    if (level > threshold) {
-      logger(text, transformer ? transformer(data) : data);
-    }
-    return data;
+  exports.flog = function (logger) {
+    return function (transformer) {
+      return function (threshold) {
+        return function (level) {
+          return function (text) {
+            return function (data) {
+              if (level > threshold) {
+                logger(text, transformer ? transformer(data) : data);
+              }
+
+              return data;
+            };
+          };
+        };
+      };
+    };
   };
-  exports.toJSON = data => JSON.stringify(data, null, 2);
+
+  exports.toJSON = function (data) {
+    return JSON.stringify(data, null, 2);
+  };
 
 }));
-//# sourceMappingURL=flog.umd.js.map
