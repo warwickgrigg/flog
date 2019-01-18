@@ -19,7 +19,7 @@ it("logger returns data passed", () => {
   expect(flog(logger)(transformer)(threshold)(level)(t)(data)).toBe(data);
 });
 
-it("logs and transforms to JSON, when level is above threshold", () => {
+it("transforms to JSON and logs, but only level is above threshold", () => {
   expect((flog(logger)(transformer)(threshold)(level)(t)("x"), log)).toEqual([
     t,
     '"x"'
