@@ -1,4 +1,4 @@
-import { flog, toJSON } from "./flog";
+import { flog, toJSON } from "./src/flog";
 
 // flog: flog(logger)(transformer)(threshold)(level)(text)(data)
 
