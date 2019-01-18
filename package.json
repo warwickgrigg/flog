@@ -13,6 +13,7 @@
     "test": "jest --coverage --no-cache",
     "make-umd": "rollup -i src/flog.js -o dist/flog.umd.js -m -f umd -n flog",
     "make-mjs": "rollup -i src/flog.js -o dist/flog.mjs -m -f es -n flog",
+    "make-cjs": "rollup -i src/flog.js -o dist/flog.js -m -f cjs -n flog",
     "release": "npm run bundle && npm test && git commit -am $npm_package_version"
   },
   "repository": "warwickgrigg/flog",
