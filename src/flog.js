@@ -1,12 +1,10 @@
-const flog = logger => transformer => threshold => level => obj => {
+const identity = data => data;
+const flog = logger => transformer => threshold => level => text => data => {
   if (level > threshold) {
-    logger(transformer(obj));
+    logger(text, (transformer || identity)(data));
   }
-  return obj;
+  return data;
 };
-const identity = obj => obj;
-const toJSON = obj => JSON.stringify(obj, null, 2);
-const clog = obj => console.log(obj);
-const logAll = flog(clog)(toJSON)(0)(1);
+const toJSON = data => JSON.stringify(data, null, 2);
 
-export { flog, clog, identity, toJSON, logAll };
+export { flog, identity, toJSON };

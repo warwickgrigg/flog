@@ -1,10 +1,3 @@
-# flog
-
-FP style logger
-
-version 0.0.1 - maybe breaking changes
-
-```javascript
 import { flog, identity, toJSON } from "./flog";
 
 // flog: flog(logger)(transformer)(threshold)(level)(text)(data)
@@ -50,4 +43,3 @@ console.log(x); // hello world
 // transformer function defaults to identity function (ie no transformation)
 
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => flog(console.log)()(5)(i)("")("i" + i)); // i6 i7 i8 i9
-```
