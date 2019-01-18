@@ -7,6 +7,14 @@
   "main": "src/flog.js",
   "module": "src/flog.mjs",
   "unpkg": "src/flog.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
   "repository": "warwickgrigg/flog",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  }
 }
