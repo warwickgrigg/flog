@@ -1,6 +1,8 @@
 # flog
 
-FP style logger
+FP style logger with zero dependencies
+
+ES6 modeule for modern browsers and modern node
 
 version 0.0.1 - maybe breaking changes
 
