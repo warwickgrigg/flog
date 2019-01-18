@@ -11,7 +11,7 @@
     "start": "parcel index.html --open",
     "build": "parcel build index.html",
     "test": "jest --coverage --no-cache",
-    "bundle": "rollup -i src/flog.js -o dist/flog.js -m -f umd -n flog",
+    "umd": "rollup -i src/flog.js -o dist/flog.umd.js -m -f umd -n flog",
     "release": "npm run bundle && npm test && git commit -am $npm_package_version"
   },
   "repository": "warwickgrigg/flog",
