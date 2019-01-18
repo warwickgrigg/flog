@@ -1,4 +1,4 @@
-import { flog, identity, toJSON } from "./flog.js";
+import { flog, toJSON } from "./flog.js";
 
 //jest tests
 
@@ -9,15 +9,11 @@ const logger = (text, data) => {
   return undefined;
 };
 
-const transformer = toJSON; // function: eg. transform logging to JSON
+const transformer = toJSON; // eg. to tabbed JSON
 const threshold = 0; // log every level greater than zero
 const level = 1; // very detailed; eg. detailed debug level
 const t = "text";
 const data = ["brave", "new", "world"];
-
-it("identity transformation function returns data passed", () => {
-  expect(identity(data)).toBe(data);
-});
 
 it("logger returns data passed", () => {
   expect(flog(logger)(transformer)(threshold)(level)(t)(data)).toBe(data);

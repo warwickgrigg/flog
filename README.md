@@ -7,7 +7,7 @@ ES6 modeule for modern browsers and modern node
 version 0.0.1 - maybe breaking changes
 
 ```javascript
-import { flog, identity, toJSON } from "./flog";
+import { flog, toJSON } from "./flog";
 
 // flog: flog(logger)(transformer)(threshold)(level)(text)(data)
 
@@ -19,7 +19,7 @@ const threshold = 0; // log every level greater than zero
 const level = 1; // very detailed; eg. detailed debug level
 const data = ["brave", "new", "world"];
 
-flog(console.log)(transformer)(threshold)(level)("tempest")(data);
+flog(console.log)(toJSON)(threshold)(level)("tempest")(data);
 // tempest [
 //  "brave",
 //  "new",
@@ -43,13 +43,7 @@ logAll("debug 1")("hello world"); // debug 1 "hello world"
 const x = logAll("debug 3")("hello world"); // debug 3 "hello world"
 console.log(x); // hello world
 
-// identity: a convenience function for no transformation
-
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i =>
-  flog(console.log)(identity)(5)(i)("")("i" + i)
-); // i6 i7 i8 i9
-
 // transformer function defaults to identity function (ie no transformation)
 
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => flog(console.log)()(5)(i)("")("i" + i)); // i6 i7 i8 i9
+[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => flog(console.log)()(5)(i)("")("i" + i)); // i6 i7 i8 i9
 ```
