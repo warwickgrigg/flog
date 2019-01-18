@@ -6,8 +6,11 @@ ES6 modeule for modern browsers and modern node
 
 version 0.0.1 - maybe breaking changes
 
+example usage (in example.js file)
+
 ```javascript
-import { flog, toJSON } from "./flog";
+const { flog, toJSON } = require("./src/flog"); //node cjs
+// or import { flog, toJSON } from "./src/flog";
 
 // flog: flog(logger)(transformer)(threshold)(level)(text)(data)
 

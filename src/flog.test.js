@@ -1,4 +1,4 @@
-import { flog, toJSON } from "./flog.js";
+const { flog, toJSON } = require("./flog");
 
 //jest tests
 
