@@ -1,4 +1,5 @@
-import { flog, toJSON } from "./src/flog";
+const { flog, toJSON } = require("./bundle");
+// or, as in tests, import { flog, toJSON } from "./src/flog";
 
 // flog: flog(logger)(transformer)(threshold)(level)(text)(data)
 
