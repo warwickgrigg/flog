@@ -9,10 +9,11 @@
   "unpkg": "dist/flog.mjs",
   "scripts": {
     "test": "jest --coverage --no-cache",
-    "make-umd": "rollup -i src/flog.js -o dist/flog.umd.js -m -f umd -n flog",
-    "make-mjs": "rollup -i src/flog.js -o dist/flog.mjs -m -f es -n flog",
-    "make-cjs": "rollup -i src/flog.js -o dist/flog.js -m -f cjs -n flog",
-    "bundle": "npm run make-umd && npm run make-cjs && npm run make-mjs",
+    "make-umd": "rollup -c -i src/flog.js -o dist/flog.umd.js -m -f umd -n flog",
+    "make-mjs": "rollup -c -i src/flog.js -o dist/flog.mjs -m -f es -n flog",
+    "make-cjs": "rollup -c -i src/flog.js -o dist/flog.js -m -f cjs -n flog",
+    "make-docs": "rollup -c -i src/flog.js -o docs/flog.umd.js -m -f umd -n flog",
+    "bundle": "npm run make-umd && npm run make-cjs && npm run make-mjs && npm run make-docs",
     "release": "npm run bundle && npm test && git commit -am $npm_package_version"
   },
   "repository": "warwickgrigg/flog",
