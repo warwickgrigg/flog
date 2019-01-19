@@ -1,5 +1,6 @@
-const { log, toJSON } = require("../dist/flog"); //node cjs
-// or import { log, toJSON } from "flog";
+const { log, toJSON } = require("../dist/flog"); //local cjs
+// or const { log, toJSON } = require("flog"); // node
+// or import { log, toJSON } from "flog"; // es6 module
 // or see index.html in examples directory for umd example
 
 // log(logger)(transformer)(threshold)(level)(text)(data)
