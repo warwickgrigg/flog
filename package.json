@@ -1,7 +1,7 @@
 {
   "name": "@warwickgrigg/flog",
   "version": "0.0.3",
-  "description": "FP style logger",
+  "description": "Tiny but mighty log function, FP style",
   "license": "MIT",
   "source": "src/flog.js",
   "main": "src/flog.js",

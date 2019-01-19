@@ -1,12 +1,10 @@
 # flog
 
-FP style logger with zero dependencies
-
-ES6 modeule for modern browsers and modern node
+Tiny but mighty log function with zero dependencies, functional style.
 
 version 0.0.3 - maybe breaking changes
 
-example usage (in example.js file)
+example usage (see example.js file)
 
 ```javascript
 
