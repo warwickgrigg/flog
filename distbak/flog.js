@@ -1,3 +1,5 @@
+'use strict';
+
 var flog = function flog(logger) {
   return function (transformer) {
     return function (threshold) {
@@ -20,5 +22,10 @@ var toJSON = function toJSON(data) {
   return JSON.stringify(data, null, 2);
 };
 
-export { flog, toJSON };
-//# sourceMappingURL=flog.mjs.map
+var flog$1 = {
+  flog: flog,
+  toJSON: toJSON
+};
+
+module.exports = flog$1;
+//# sourceMappingURL=flog.js.map

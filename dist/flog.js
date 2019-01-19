@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var flog = function flog(logger) {
   return function (transformer) {
     return function (threshold) {
@@ -22,10 +24,6 @@ var toJSON = function toJSON(data) {
   return JSON.stringify(data, null, 2);
 };
 
-var flog$1 = {
-  flog: flog,
-  toJSON: toJSON
-};
-
-module.exports = flog$1;
+exports.flog = flog;
+exports.toJSON = toJSON;
 //# sourceMappingURL=flog.js.map

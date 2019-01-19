@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.flog = factory());
-}(this, function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = global || self, factory(global.flog = {}));
+}(this, function (exports) { 'use strict';
 
   var flog = function flog(logger) {
     return function (transformer) {
@@ -26,12 +26,10 @@
     return JSON.stringify(data, null, 2);
   };
 
-  var flog$1 = {
-    flog: flog,
-    toJSON: toJSON
-  };
+  exports.flog = flog;
+  exports.toJSON = toJSON;
 
-  return flog$1;
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
 //# sourceMappingURL=flog.umd.js.map

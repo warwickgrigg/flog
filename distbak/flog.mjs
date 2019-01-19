@@ -20,5 +20,10 @@ var toJSON = function toJSON(data) {
   return JSON.stringify(data, null, 2);
 };
 
-export { flog, toJSON };
+var flog$1 = {
+  flog: flog,
+  toJSON: toJSON
+};
+
+export default flog$1;
 //# sourceMappingURL=flog.mjs.map

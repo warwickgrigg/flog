@@ -1,24 +1,21 @@
-const presets = [];
+'use strict';
 
-/*
-const plugins = [];
+module.exports = function(api) {
+  const presets = [];
+  // if (process.env["ENV"] === "prod") {
+  if (api.env(envName => envName.startsWith("dev"))) {
+    presets.push(["@babel/env", {"modules": false}]);
+  }
 
-if (process.env["ENV"] === "prod") {
-  presets.push(["@babel/env", {"modules": false}]);
+  if (true)
+  console.log(JSON.stringify({
+    "using": "src/.bablerc.js",
+    "api.keys": Object.keys(api),
+    "process.env-ENV": process.env["ENV"],
+    "api.env": api.env(), 
+    "api.caller": api.caller(caller => caller && caller.name),
+    presets
+  }, null, 2)); 
+  
+  return presets.length>0 ? {presets} : {};
 }
-module.exports = { presets, plugins };
-*/
-
-if (process.env["ENV"] === "prod") {
-  presets.push(["@babel/env", {"modules": false}]);
-}
-
-module.exports = { presets };
-
-/*
-{
-  "presets": [
-    ["@babel/env", {"modules": false}]
-  ]
-}
-*/
