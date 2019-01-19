@@ -7,7 +7,7 @@ module.exports = function(api) {
     presets.push(["@babel/env", {"modules": false}]);
   }
 
-  if (true)
+  if (false)
   console.log(JSON.stringify({
     "using": "src/.bablerc.js",
     "api.keys": Object.keys(api),

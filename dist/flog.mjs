@@ -1,4 +1,4 @@
-var flog = function flog(logger) {
+var log = function log(logger) {
   return function (transformer) {
     return function (threshold) {
       return function (level) {
@@ -20,5 +20,5 @@ var toJSON = function toJSON(data) {
   return JSON.stringify(data, null, 2);
 };
 
-export { flog, toJSON };
+export { log, toJSON };
 //# sourceMappingURL=flog.mjs.map

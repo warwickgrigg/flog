@@ -11,29 +11,29 @@
 	<div id="app"></div>
 </body>
 <script>
-var log;
+
+const log = flog.log;
+const toJSON = flog.toJSON;
+
+var logged;
 const logger = (text, data) => {
-  log = [text, data];
+  logged = [text, data];
   return undefined;
 };
 
-const f = flog;
-flog = f.flog;
-toJSON = f.toJSON;
-
-const transformer = flog.toJSON; // eg. to tabbed JSON
+const transformer = toJSON; // eg. to tabbed JSON
 const threshold = 0; // log every level greater than zero
 const level = 1; // very detailed; eg. detailed debug level
 const t = "text";
 const data = ["brave", "new", "world"];
 
-flog(logger)(transformer)(threshold)(level)(t)(data);
+log(logger)(transformer)(threshold)(level)(t)(data);
 
 document.getElementById("app").innerHTML = `
 
 <h1>Hello Flog!</h1>
 <div>
-  <pre>` + log + `<pre>
+  <pre>` + logged + `<pre>
 </div>
 `
 

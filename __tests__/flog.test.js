@@ -1,13 +1,13 @@
 'use strict';
 
-import { flog, toJSON } from "../src/flog";
+import { log, toJSON } from "../src/flog";
 
 //jest tests
 
 // test logger - can't test the actual console.log
-var log;
+var logged;
 const logger = (text, data) => {
-  log = [text, data];
+  logged = [text, data];
   return undefined;
 };
 
@@ -18,24 +18,24 @@ const t = "text";
 const data = ["brave", "new", "world"];
 
 it("logger returns data passed", () => {
-  expect(flog(logger)(transformer)(threshold)(level)(t)(data)).toBe(data);
+  expect(log(logger)(transformer)(threshold)(level)(t)(data)).toBe(data);
 });
 
 it("transforms to JSON and logs, but only level is above threshold", () => {
-  expect((flog(logger)(transformer)(threshold)(level)(t)("x"), log)).toEqual([
+  expect((log(logger)(transformer)(threshold)(level)(t)("x"), logged)).toEqual([
     t,
     '"x"'
   ]);
 });
 
 it("transformer function defaults to identity function (ie no transformation)", () => {
-  expect((flog(logger)()(threshold)(level)(t)("x"), log)).toEqual([t, "x"]);
+  expect((log(logger)()(threshold)(level)(t)("x"), logged)).toEqual([t, "x"]);
 });
 
 it("skips logging when level is below threshold", () => {
   expect(
-    ((log = "test"),
-    flog(logger)(transformer)(2)(1)(t)("should not get logged"),
-    log)
+    ((logged = "test"),
+    log(logger)(transformer)(2)(1)(t)("should not get logged"),
+    logged)
   ).toBe("test");
 });

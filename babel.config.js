@@ -7,7 +7,7 @@ module.exports = function(api) {
     presets.push(['@babel/preset-env']);
   }
   
-  if (true)
+  if (false)
   console.log(JSON.stringify({
     "using": "babel.config.js",
     "api.keys": Object.keys(api),

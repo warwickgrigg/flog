@@ -4,7 +4,7 @@
   (global = global || self, factory(global.flog = {}));
 }(this, function (exports) { 'use strict';
 
-  var flog = function flog(logger) {
+  var log = function log(logger) {
     return function (transformer) {
       return function (threshold) {
         return function (level) {
@@ -26,7 +26,7 @@
     return JSON.stringify(data, null, 2);
   };
 
-  exports.flog = flog;
+  exports.log = log;
   exports.toJSON = toJSON;
 
   Object.defineProperty(exports, '__esModule', { value: true });

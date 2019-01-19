@@ -1,6 +1,6 @@
 {
   "name": "@warwickgrigg/flog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "FP style logger",
   "license": "MIT",
   "source": "src/flog.js",
@@ -12,9 +12,10 @@
     "make-umd": "rollup -c --environment ENV:prod -i src/flog.js -o dist/flog.umd.js -m -f umd -n flog",
     "make-mjs": "rollup -c --environment ENV:prod -i src/flog.js -o dist/flog.mjs -m -f es -n flog",
     "make-cjs": "rollup -c --environment ENV:prod -i src/flog.js -o dist/flog.js -m -f cjs -n flog",
-    "make-docs": "rollup -c --environment ENV:prod -i src/flog.js -o docs/flog.umd.js -m -f umd -n flog",
-    "bundle": "npm run make-umd && npm run make-cjs && npm run make-mjs && npm run make-docs",
-    "release": "npm run bundle && npm test && git commit -am $npm_package_version"
+    "make-ex": "rollup -c --environment ENV:prod -i src/flog.js -o examples/flog.umd.js -m -f umd -n flog",
+    "bundle": "npm run make-umd && npm run make-cjs && npm run make-mjs && npm run make-ex",
+    "release": "npm run bundle && npm test && git commit -am $npm_package_version",
+    "serve": "npx http-server examples"
   },
   "repository": "warwickgrigg/flog",
   "dependencies": {},
