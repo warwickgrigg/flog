@@ -1,19 +1,8 @@
-
-```javascript
-
-const { log, toJSON } = require("flog"); //node common js
-// or import { log, toJSON } from "flog";
-// or see index.html in examples directory for umd example
-
-```
 # flog
 
 Tiny but mighty log function with zero dependencies, functional style.
 
 version 0.0.3 - maybe breaking changes
-
-example usage (see example.js file)
-
 
 ## Installation
 
@@ -33,6 +22,7 @@ Here some examples to get you started.
 
 ```jsx
 import { h, patch } from "@warwickgrigg/flog"
+// or const { log, toJSON } = require("flog"); //node common js
 
 // log(logger)(transformer)(threshold)(level)(text)(data)
 
