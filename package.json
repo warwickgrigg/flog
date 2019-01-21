@@ -6,7 +6,8 @@
   "source": "src/flog.js",
   "main": "dist/flog.js",
   "module": "dist/flog.mjs",
-  "unpkg": "dist/flog.mjs",
+  "browser": ""dist/flog.umd.js",
+  "unpkg": "dist/flog.umd.js",
   "scripts": {
     "test": "jest --coverage --no-cache",
     "make-umd": "rollup -c --environment ENV:prod -i src/flog.js -o dist/flog.umd.js -m -f umd -n flog",
