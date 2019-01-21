@@ -1,3 +1,11 @@
+
+```javascript
+
+const { log, toJSON } = require("flog"); //node common js
+// or import { log, toJSON } from "flog";
+// or see index.html in examples directory for umd example
+
+```
 # flog
 
 Tiny but mighty log function with zero dependencies, functional style.
@@ -6,11 +14,25 @@ version 0.0.3 - maybe breaking changes
 
 example usage (see example.js file)
 
-```javascript
 
-const { log, toJSON } = require("flog"); //node common js
-// or import { log, toJSON } from "flog";
-// or see index.html in examples directory for umd example
+## Installation
+
+<pre>
+npm i <a href=https://www.npmjs.com/package/@warwickgrigg/flog>@warwickgrigg/flog</a>
+</pre>
+
+Don't want to set up a build environment? Download flog from [unpkg](https://unpkg.com/@warwickgrigg/flog) and it will be globally available through the window.flog object. Works in ES5-friendly browsers >=IE9.
+
+```html
+<script src="https://unpkg.com/@warwickgrigg/flog"></script>
+```
+
+## Usage
+
+Here some examples to get you started. 
+
+```jsx
+import { h, patch } from "@warwickgrigg/flog"
 
 // log(logger)(transformer)(threshold)(level)(text)(data)
 
@@ -51,3 +73,7 @@ console.log(x); // hello world
 [1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => log(console.log)()(5)(i)("")("i" + i)); // i6 i7 i8 i9
 
 ```
+
+## License
+
+Superfine is MIT licensed. See [LICENSE](/LICENSE.md).
