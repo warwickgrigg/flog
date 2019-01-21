@@ -66,4 +66,4 @@ console.log(x); // hello world
 
 ## License
 
-Superfine is MIT licensed. See [LICENSE](/LICENSE.md).
+flog is MIT licensed. See [LICENSE](/LICENSE.md).
