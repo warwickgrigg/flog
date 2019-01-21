@@ -1,5 +1,7 @@
 # flog
 
+[![npm](https://img.shields.io/npm/v/@warwickgrigg/flog.svg)](https://www.npmjs.org/package/@warwickgrigg/flog)
+
 Tiny but mighty log function with zero dependencies, functional style.
 
 version 0.0.3 - maybe breaking changes
