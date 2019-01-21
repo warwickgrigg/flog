@@ -1,7 +1,7 @@
 # flog
 
 [![npm](https://img.shields.io/npm/v/@warwickgrigg/flog.svg)](https://www.npmjs.org/package/@warwickgrigg/flog)
-[![npm](https://img.shields.io/bundlephobia/minzip/@warwickgrigg/flog.svg](https://https://bundlephobia.com/result?p=@warwickgrigg/flog)
+[![bundlephobia](https://img.shields.io/bundlephobia/minzip/@warwickgrigg/flog.svg](https://https://bundlephobia.com/result?p=@warwickgrigg/flog)
 
 Tiny but mighty log function with zero dependencies, functional style.
 
