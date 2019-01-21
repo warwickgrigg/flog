@@ -4,8 +4,6 @@
 
 Tiny but mighty log function with zero dependencies, functional style.
 
-version 0.0.3 - maybe breaking changes
-
 ## Installation
 
 <pre>

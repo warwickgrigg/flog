@@ -1,6 +1,6 @@
 {
   "name": "@warwickgrigg/flog",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tiny but mighty log function, FP style",
   "license": "MIT",
   "source": "src/flog.js",
@@ -15,7 +15,7 @@
     "make-cjs": "rollup -c --environment ENV:prod -i src/flog.js -o dist/flog.js -m -f cjs -n flog",
     "make-ex": "rollup -c --environment ENV:prod -i src/flog.js -o examples/flog.umd.js -m -f umd -n flog",
     "bundle": "npm run make-umd && npm run make-cjs && npm run make-mjs && npm run make-ex",
-    "build": "npm run bundle",git commit
+    "build": "npm run bundle",
     "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish --access public",
     "example": "node examples/example.js & npx http-server examples"
   },
