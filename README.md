@@ -21,8 +21,8 @@ Don't want to set up a build environment? Download flog from [unpkg](https://unp
 Here some examples to get you started. 
 
 ```jsx
-import { h, patch } from "@warwickgrigg/flog"
-// or const { log, toJSON } = require("flog"); //node common js
+import { h, patch } from "@warwickgrigg/flog";
+// or const { log, toJSON } = require("@warwickgrigg/flog"); // node common js
 
 // log(logger)(transformer)(threshold)(level)(text)(data)
 
