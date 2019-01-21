@@ -6,7 +6,7 @@
   "source": "src/flog.js",
   "main": "dist/flog.js",
   "module": "dist/flog.mjs",
-  "browser": ""dist/flog.umd.js",
+  "browser": "dist/flog.umd.js",
   "unpkg": "dist/flog.umd.js",
   "scripts": {
     "test": "jest --coverage --no-cache",
@@ -20,7 +20,7 @@
   },
   "repository": "warwickgrigg/flog",
   "files": [
-    "src",
+    "src/flog.js",
     "dist"
   ],
   "dependencies": {},
